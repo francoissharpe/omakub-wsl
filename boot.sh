@@ -1,11 +1,11 @@
 set -e
 
-ascii_art='________                  __        ___.
-\_____  \   _____ _____  |  | ____ _\_ |__
- /   |   \ /     \\__   \ |  |/ /  |  \ __ \
-/    |    \  Y Y  \/ __ \|    <|  |  / \_\ \
-\_______  /__|_|  (____  /__|_ \____/|___  /
-        \/      \/     \/     \/         \/
+ascii_art='________                  __        ___.              __      __  _________.____     
+\_____  \   _____ _____  |  | ____ _\_ |__           /  \    /  \/   _____/|    |    
+ /   |   \ /     \\__  \ |  |/ /  |  \ __ \   ______ \   \/\/   /\_____  \ |    |    
+/    |    \  Y Y  \/ __ \|    <|  |  / \_\ \ /_____/  \        / /        \|    |___ 
+\_______  /__|_|  (____  /__|_ \____/|___  /           \__/\  / /_______  /|_______ \
+        \/      \/     \/     \/         \/                 \/          \/         \/
 '
 
 echo -e "$ascii_art"
@@ -17,7 +17,7 @@ sudo apt-get install -y git >/dev/null
 
 echo "Cloning Omakub..."
 rm -rf ~/.local/share/omakub
-git clone https://github.com/basecamp/omakub.git ~/.local/share/omakub >/dev/null
+git clone https://github.com/francoissharpe/omakub-wsl.git ~/.local/share/omakub >/dev/null
 if [[ $OMAKUB_REF != "master" ]]; then
 	cd ~/.local/share/omakub
 	git fetch origin "${OMAKUB_REF:-stable}" && git checkout "${OMAKUB_REF:-stable}"
